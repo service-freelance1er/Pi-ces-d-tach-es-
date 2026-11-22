@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panier - Pièces Auto Adjamé</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="logo">🚗 <b>Pièces Auto Adjamé</b><span>Adjamé - Abidjan</span></div>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="produits.html">Boutique</a>
+    <a href="panier.html" class="active">Panier <b id="cart-count">0</b></a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <a class="btn-wa" href="https://wa.me/22555061653" target="_blank">WhatsApp</a>
+</header>
+
+<section class="section">
+  <h1>🛒 Votre Panier</h1>
+  <p style="color:#666;margin:8px 0 20px">Vérifiez votre commande, puis envoyez-la sur WhatsApp.</p>
+  <div id="cart-items"></div>
+
+  <div style="background:#fff;padding:20px;border-radius:14px;margin-top:20px;max-width:500px">
+    <div style="display:flex;justify-content:space-between;font-size:20px"><span>Total :</span><b id="cart-total">0 FCFA</b></div>
+    <p style="color:#666;font-size:14px;margin:8px 0">Livraison calculée sur WhatsApp selon votre commune.</p>
+    <button class="btn-add" style="font-size:16px;padding:16px" onclick="checkout()">✅ Commander sur WhatsApp</button>
+    <a href="produits.html" style="display:block;text-align:center;margin-top:12px;font-weight:bold">← Continuer mes achats</a>
+  </div>
+</section>
+
+<footer>
+  <div><b>Pièces Auto Adjamé</b><p>Adjamé, Abidjan<br>WhatsApp : 55 06 16 53</p></div>
+  <div><a href="produits.html">Boutique</a><br><a href="contact.html">Contact</a></div>
+  <div><a href="https://wa.me/22555061653" target="_blank" class="btn-wa">Commander sur WhatsApp</a></div>
+</footer>
+<script src="app.js" defer></script>
+</body>
+  </html>
