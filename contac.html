@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - Pièces Auto Adjamé</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="logo">🚗 <b>Pièces Auto Adjamé</b><span>Adjamé - Abidjan</span></div>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="produits.html">Boutique</a>
+    <a href="panier.html">Panier <b id="cart-count">0</b></a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+  <a class="btn-wa" href="https://wa.me/22555061653" target="_blank">WhatsApp</a>
+</header>
+
+<section class="section" style="display:grid;grid-template-columns:1fr 1fr;gap:30px">
+  <div>
+    <h1>Contactez-nous</h1>
+    <p style="line-height:1.8;margin:14px 0"><b>📍 Adresse :</b> Adjamé, Abidjan - Côte d'Ivoire<br><b>📞 WhatsApp / Téléphone :</b> 55 06 16 53<br><b>🕒 Horaires :</b> 7j/7 - 8h à 20h<br><b>🚚 Livraison :</b> Adjamé, Plateau, Yopougon, Cocody, Abobo, partout en Côte d'Ivoire<br><b>💰 Paiement :</b> Espèces, Orange Money, Wave, MTN MoMo</p>
+    <a class="btn-wa" href="https://wa.me/22555061653?text=Bonjour%20Pi%C3%A8ces%20Auto%20Adjam%C3%A9" target="_blank" style="display:inline-block;padding:14px 22px">Discuter sur WhatsApp →</a>
+  </div>
+  <div class="form" style="background:#fff;padding:22px;border-radius:14px">
+    <h3>Demander une pièce</h3>
+    <p style="color:#666;font-size:14px;margin:8px 0 14px">Remplissez, ça part directement sur notre WhatsApp.</p>
+    <input id="c-nom" placeholder="Votre nom">
+    <input id="c-tel" placeholder="Votre téléphone">
+    <input id="c-piece" placeholder="Quelle pièce cherchez-vous ? Ex: Moteur Turbo">
+    <textarea id="c-msg" placeholder="Votre message... Ex: Pour Peugeot 308, année 2018"></textarea>
+    <button class="btn-add" onclick="sendContact()">Envoyer sur WhatsApp</button>
+  </div>
+</section>
+
+<footer>
+  <div><b>Pièces Auto Adjamé</b><p>Adjamé, Abidjan<br>WhatsApp : 55 06 16 53</p></div>
+  <div><a href="produits.html">Boutique</a><br><a href="panier.html">Panier</a></div>
+  <div><a href="https://wa.me/22555061653" target="_blank" class="btn-wa">Commander sur WhatsApp</a></div>
+</footer>
+<script src="app.js" defer></script>
+<script>
+function sendContact(){
+  const nom=document.getElementById("c-nom").value||"";
+  const tel=document.getElementById("c-tel").value||"";
+  const piece=document.getElementById("c-piece").value||"";
+  const msg=document.getElementById("c-msg").value||"";
+  const text="Bonjour Pieces Auto Adjame,%0A Nom : "+nom+"%0A Tel : "+tel+"%0A Piece cherchee : "+piece+"%0A Message : "+msg;
+  window.open("https://wa.me/22555061653?text="+text,"_blank");
+}
+</script>
+</body>
+  </html>
