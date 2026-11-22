@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boutique - Pièces Auto Adjamé</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="logo">🚗 <b>Pièces Auto Adjamé</b><span>Adjamé - Abidjan</span></div>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="produits.html" class="active">Boutique</a>
+    <a href="panier.html">Panier <b id="cart-count">0</b></a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <a class="btn-wa" href="https://wa.me/22555061653" target="_blank">WhatsApp</a>
+</header>
+
+<section class="section">
+  <h1>Notre Boutique</h1>
+  <p style="color:#666;margin:8px 0 20px">Pièces d'origine à Adjamé. Recherche, filtre, tri, commande en 1 clic sur WhatsApp.</p>
+
+  <div class="toolbar">
+    <input type="text" placeholder="🔍 Rechercher : moteur, piston..." oninput="searchProducts(this.value)">
+    <select onchange="filterCategory(this.value)">
+      <option value="all">Toutes catégories</option>
+      <option value="Moteur">Moteur</option>
+    </select>
+    <select onchange="sortProducts(this.value)">
+      <option value="default">Tri : Pertinence</option>
+      <option value="price-asc">Prix : Croissant</option>
+      <option value="price-desc">Prix : Décroissant</option>
+    </select>
+  </div>
+
+  <div id="product-grid" class="grid"></div>
+  <p id="product-count" class="count"></p>
+
+  <div style="background:#fff;padding:20px;border-radius:14px;margin-top:30px">
+    <h3>Tu ne trouves pas ta pièce ?</h3>
+    <p style="margin:8px 0">Envoie-nous la photo de ta pièce sur WhatsApp, on te trouve ça à Adjamé.</p>
+    <a class="btn-wa" href="https://wa.me/22555061653?text=Bonjour%2C%20je%20cherche%20une%20pi%C3%A8ce" target="_blank">Envoyer photo sur WhatsApp →</a>
+  </div>
+</section>
+
+<footer>
+  <div><b>Pièces Auto Adjamé</b><p>Adjamé, Abidjan - Côte d'Ivoire<br>WhatsApp : 55 06 16 53<br>Ouvert 7j/7 - 8h à 20h</p></div>
+  <div><a href="index.html">Accueil</a><br><a href="panier.html">Panier</a><br><a href="contact.html">Contact</a></div>
+  <div><a href="https://wa.me/22555061653" target="_blank" class="btn-wa">Commander sur WhatsApp</a></div>
+</footer>
+<script src="app.js" defer></script>
+</body>
+      </html>
